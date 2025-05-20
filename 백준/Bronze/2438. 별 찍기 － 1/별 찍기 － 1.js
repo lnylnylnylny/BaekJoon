@@ -1,6 +1,7 @@
-const input = require('fs').readFileSync('./dev/stdin').toString();
-cnt = Number(input);
+const input = Number(
+  require("fs").readFileSync("/dev/stdin").toString().trim()
+);
 
-for(let i = 1; i <=cnt; i++){
-    console.log('*'.repeat(i));
+for (let i = 1; i <= input; i++) {
+  console.log("*".repeat(i));
 }
