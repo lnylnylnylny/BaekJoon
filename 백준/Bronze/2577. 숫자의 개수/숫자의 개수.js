@@ -1,15 +1,14 @@
-const input = require("fs")
+const num = require("fs")
   .readFileSync("/dev/stdin")
   .toString()
   .split("\n")
   .map(Number);
-
-let numAnswer = input[0] * input[1] * input[2];
-let stringAnswer = String(numAnswer);
+let mult = num[0] * num[1] * num[2];
+let Stringmult = String(mult);
 let cnt = Array(10).fill(0);
 
-for (let i of stringAnswer) {
-  cnt[Number(i)]++;
+for (let i of Stringmult) {
+  cnt[i]++;
 }
 
 for (let i = 0; i < 10; i++) {
