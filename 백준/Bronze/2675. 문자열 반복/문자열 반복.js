@@ -1,18 +1,12 @@
-const input = require("fs")
-  .readFileSync("/dev/stdin")
-  .toString()
-  .trim()
-  .split("\n");
+let input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
 
-for (let i = 0; i < input.length; i++) {
-  const [time, text] = input[i].split(" ");
 
-  if (!time || !text) continue;
-
+for (let i = 1; i <= Number(input[0]); i++) {
+  let [num, word] = input[i].split(" ");
   let answer = "";
 
-  for (let char of text) {
-    answer += char.repeat(Number(time));
+  for (let j = 0; j < word.length; j++) {
+    answer += word[j].repeat(Number(num));
   }
 
   console.log(answer);
